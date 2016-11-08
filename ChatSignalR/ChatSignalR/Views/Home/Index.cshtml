@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Web.Optimization
+@model ChatSignalR.Models.User
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+@Scripts.Render("~/scripts/jquery-1.8.0.min.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.min.js")
+    
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { id = "login" }))
+        {
+            <div class="loginRegister">
+                @Html.TextBox("login", "login", new {id = "login"})
+                <br/>
+                @Html.Password("password", "password", new {id = "password"})
+                <br/>
+                <input type="submit" id="subLog" value="Enter"/>
+                <br/>
+                <div id="container"></div>
+                @if (@ViewBag.Ex != null)
+                {
+                    <p class="exception">@ViewBag.Ex</p>
+                }
+                <a href="@Url.Action("Register", "Home")">Register</a>
+            </div>           
+        }
+    
+  
+</body>
+</html>

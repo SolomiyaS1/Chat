@@ -1,0 +1,24 @@
+﻿@using System.Web.Optimization
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Chat</title>
+    <link href="@Url.Content("~/Styles/normalize.css")" rel="stylesheet" type="text/css"/>
+    <link href="@Url.Content("~/Styles/chat.css")" rel="stylesheet" type="text/css"/>
+    @Scripts.Render("~/scripts/jquery-1.8.0.min.js")
+    @Scripts.Render("~/scripts/style.js")
+</head>
+<body>
+<h1>What's Up Chat</h1>
+    <div id="regLogContainer">
+        @RenderBody()
+    </div>
+</body>
+</html>

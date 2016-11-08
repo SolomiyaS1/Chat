@@ -1,0 +1,78 @@
+﻿h1 {
+    display: inline-block;
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+}
+body {
+    background-color: rgb(209, 255, 185);
+}
+#regLogContainer {
+    position: relative;
+    background-color: white;
+}
+.loginRegister {
+    position: absolute;
+    margin-left: 38%;
+    margin-top: 30%;
+}
+.loginRegister > input{
+    margin-top: 20px;
+    height: 30px;
+}
+#subLog, #subReg {
+    position: relative;
+    width: 100%;
+    border-color: green;
+    background-color: white;
+}
+#subLog:hover, #subReg:hover, #sendmessage:hover {
+    background-color: green;
+    color: white;
+}
+a {
+    color: green;
+    position: absolute;
+    text-decoration: none;
+    left: 35%;
+    bottom: -20%;
+}
+.field-validation-error{
+    display: block;
+    color:red;
+    font-size: 15px;
+    max-width: 200px;
+}
+.exception {
+     display: block;
+    color:red;
+    font-size: 15px;
+    max-width: 200px;
+}
+#inputForm {
+    position: absolute;
+}
+#chatusers {
+    position: absolute;
+    display: inline-block;
+    border-left: 2px solid green;
+    width: 30%;
+      overflow: scroll;
+}
+#chatroom {
+    width: 70%;
+     display: inline-block;
+       overflow: scroll;
+}
+#chatBody {
+    position: relative;
+}
+#sendmessage {
+     border-color: green;
+    background-color: white;
+}

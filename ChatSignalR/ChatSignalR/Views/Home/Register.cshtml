@@ -1,0 +1,37 @@
+﻿@model ChatSignalR.Models.User
+@{
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+            @using (Html.BeginForm("Register", "Home", FormMethod.Post, new { id = "reg" }))
+            {
+                <div class="loginRegister">
+                    @Html.HiddenFor(m => m.Id)
+
+                    @Html.TextBox("name", "Enter login", new { id = "log" })
+                    <div>@Html.ValidationMessageFor(model => model.Name)</div>
+                    
+                    @Html.TextBox("email", "Enter email", new { id = "em" })
+                    <div>@Html.ValidationMessageFor(model => model.Email)</div>
+                    
+                    @Html.Password("password", "password", new { id = "pass" })
+                    <div>@Html.ValidationMessageFor(model => model.Password)</div>
+                   
+                    <input type="submit" id="subReg" value="Register" />
+                    <br />
+                    @if (@ViewBag.Ex != null)
+                    {                      
+                            <p class="exception">@ViewBag.Ex</p>                      
+                    }
+                    <a href="@Url.Action("Index", "Home")">Login</a>
+                </div>
+            }
+</body>
+</html>
