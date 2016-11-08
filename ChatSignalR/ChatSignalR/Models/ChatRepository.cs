@@ -25,7 +25,6 @@ namespace ChatSignalR.Models
         }            
         public void AddMessage(Message mes)
         {
-            if (mes != null)
             Db.Messages.Add(mes);
             Db.SaveChanges();
         }
@@ -46,9 +45,7 @@ namespace ChatSignalR.Models
 
         public User CheckLoginPassword(string login, string password)
         {
-            User user = Db.Users.FirstOrDefault(u => u.Name == login && u.Password == password);
-            if(user == null) throw new UserException("Invalid pair login-password");
-            return user;
+            return Db.Users.FirstOrDefault(u => u.Name == login && u.Password == password);         
         }
     }
 }

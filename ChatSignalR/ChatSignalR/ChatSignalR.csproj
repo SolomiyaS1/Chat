@@ -202,6 +202,8 @@
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\IValidation.cs" />
+    <Compile Include="Service\Validation.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>

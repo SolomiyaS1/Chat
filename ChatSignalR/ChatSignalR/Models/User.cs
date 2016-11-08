@@ -6,9 +6,9 @@ namespace ChatSignalR.Models
     public class User
     {
         public int Id { get; set; }
-
-        [StringLength(15, MinimumLength = 3, ErrorMessage = "Login must be from 3 to 15 symbols")]
+      
         [RegularExpression(@"[A-Z|a-z|0-9|_]{3,15}", ErrorMessage = "Login may contain of upper/lowercase letters, numbers and _")]
+        [StringLength(15, MinimumLength = 3, ErrorMessage = "Login must be from 3 to 15 symbols")]
         [Required(ErrorMessage = "Enter login")]
         public string Name { get; set; }
         [StringLength(20, MinimumLength = 6, ErrorMessage = "Password must be from 6 to 20 symbols")]
